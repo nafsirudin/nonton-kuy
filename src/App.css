@@ -1,0 +1,17 @@
+.active{
+    color: #e50916 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #e50916 !important;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -2px;
+}
+
+.swiper-pagination-bullet {
+    background: #767474;
+}
+
+.badge-danger {
+    background-color: #e50916;
+}

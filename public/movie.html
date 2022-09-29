@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- CSS bootstrap-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--  Style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--  Responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>NontonKuy</title>
+
+    <style>
+        .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-movie-info,
+        .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-movie-meta-holder,
+        .gen-banner-movies .oswiper .swiper-slide .gen-movie-contain .gen-movie-action,
+        .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-tag-line,
+        .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-tag-img {
+            transition: transform .5s, opacity .3s, background .5s;
+            opacity: 0;
+            transform: translateX(300px);
+        }
+
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-info,
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-meta-holder,
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-action,
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-tag-line,
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-tag-img {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-tag-line,
+        .gen-banner-movies .gen-movie-contain .gen-tag-img {
+            transition-delay: .3s;
+        }
+
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-info {
+            transition-delay: .5s;
+        }
+
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-meta-holder {
+            transition-delay: .7s;
+        }
+
+        .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-action {
+            transition-delay: .9s;
+        }
+    </style>
+  </head>
+  <body>
+    <header id="gen-header" class="gen-header-style-1 gen-has-sticky">
+        <div class="gen-bottom-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="#">
+                                <img class="img-fluid logo" src="assets/images/logo-1.png" alt="streamlab-image">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div id="gen-menu-contain" class="gen-menu-contain">
+                                    <ul id="gen-main-menu" class="navbar-nav ml-auto">
+                                        <li class="menu-item active">
+                                            <a href="#" aria-current="page">Home</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" aria-current="page">Category</a>
+                                            <i class="fa fa-chevron-down gen-submenu-icon"></i>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item">
+                                                    <a href="index.html" aria-current="page">Main Home</a>
+                                                </li>
+                                                <li class="menu-item active">
+                                                    <a href="movies-home.html" aria-current="page">Movies Home</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="tv-shows-home.html" aria-current="page">Tv Shows Home</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="video-home.html" aria-current="page">Video Home</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gen-header-info-box">
+                                <div class="gen-menu-search-block">
+                                    <a href="javascript:void(0)" id="gen-seacrh-btn"><i class="fa fa-search"></i></a>
+                                    <div class="gen-search-form">
+                                        <form role="search" method="get" class="search-form" action="#">
+                                            <label>
+                                                <span class="screen-reader-text"></span>
+                                                <input type="search" class="search-field" placeholder="Search …"
+                                                    value="" name="s">
+                                            </label>
+                                            <button type="submit" class="search-submit"><span
+                                                    class="screen-reader-text"></span></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="gen-account-holder">
+                                    <a href="javascript:void(0)" id="gen-user-btn"><i class="fa fa-user"></i></a>
+                                    <div class="gen-account-menu">
+                                        <ul class="gen-account-menu">
+                                            <!-- Pms Menu -->
+                                            <li>
+                                                <a href="log-in.html"><i class="fas fa-sign-in-alt"></i>
+                                                    login </a>
+                                            </li>
+                                            <li>
+                                                <a href="register.html"><i class="fa fa-user"></i>
+                                                    Register </a>
+                                            </li>
+                                            <!-- Library Menu -->
+                                            <li>
+                                                <a href="library.html">
+                                                    <i class="fa fa-indent"></i>
+                                                    Library </a>
+                                            </li>
+                                            <li>
+                                                <a href="library.html"><i class="fa fa-list"></i>
+                                                    Movie Playlist </a>
+                                            </li>
+                                            <li>
+                                                <a href="library.html"><i class="fa fa-list"></i>
+                                                    Tv Show Playlist </a>
+                                            </li>
+                                            <li>
+                                                <a href="library.html"><i class="fa fa-list"></i>
+                                                    Video Playlist </a>
+                                            </li>
+                                            <li>
+                                                <a href="upload-video.html"> <i class="fa fa-upload"></i>
+                                                    Upload Video </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="gen-btn-container">
+                                    <a href="register.html" class="gen-button">
+                                        <div class="gen-button-block">
+                                            <span class="gen-button-line-left"></span>
+                                            <span class="gen-button-text">Subscribe</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-0 pb-0">
+        <div class="container-fluid px-0">
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="gen-banner-movies">
+                        <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="true"
+                            data-desk_num="1" data-lap_num="1" data-tab_num="1" data-mob_num="1" data-mob_sm="1"
+                            data-autoplay="true" data-loop="true" data-margin="30">
+                            <div class="item" style="background: url('assets/images/background/asset-9.jpg')">
+                                <div class="gen-movie-contain h-100">
+                                    <div class="container h-100">
+                                        <div class="row align-items-center h-100">
+                                            <div class="col-xl-6">
+                                                <div class="gen-tag-line"><span></span></div>
+                                                <div class="gen-movie-info">
+                                                    <h3>Rebuneka the doll</h3>
+                                                </div>
+                                                <div class="gen-movie-meta-holder">
+                                                    <ul>
+                                                        <li class="gen-sen-rating">
+                                                            <span>
+                                                                R </span>
+                                                        </li>
+                                                        <li>1hr 44 mins</li>
+                                                        <li> <img src="assets/images/asset-2.png" alt="streamlab-image">
+                                                            <span>
+                                                                0 </span>
+                                                        </li>
+                                                        <li>
+                                                            2018
+                                                        </li>
+                                                        <li>
+                                                            <a href="action.html"><span>Action</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <p>Streamlab is a long established fact that a reader will be
+                                                        distracted by the readable content of a page when Streamlab at
+                                                        its layout. The point of using Lorem Streamlab is that it has a
+                                                        more-or-less normal distribution of Streamlab as opposed
+                                                        Streamlab.</p>
+                                                </div>
+                                                <div class="gen-movie-action">
+                                                    <div class="gen-btn-container button-1">
+                                                        <a href="single-movie.html" class="gen-button">
+                                                            <span class="text">Play Now</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="gen-btn-container button-2">
+                                                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                                                            class="gen-button popup-youtube popup-vimeo popup-gmaps gen-button-link">
+                                                            <i aria-hidden="true" class="ion ion-play"></i> <span
+                                                                class="text">Watch Trailer</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" style="background: url('assets/images/background/asset-52.jpg')">
+                                <div class="gen-movie-contain h-100">
+                                    <div class="container h-100">
+                                        <div class="row align-items-center h-100">
+                                            <div class="col-xl-6">
+                                                <div class="gen-tag-line"><span></span></div>
+                                                <div class="gen-movie-info">
+                                                    <h3>the darkest nightplace</h3>
+                                                </div>
+                                                <div class="gen-movie-meta-holder">
+                                                    <ul>
+                                                        <li class="gen-sen-rating">
+                                                            <span>
+                                                                R</span>
+                                                        </li>
+                                                        <li>1hr 46mins</li>
+                                                        <li> <img src="assets/images/asset-2.png" alt="streamlab-image">
+                                                            <span>
+                                                                0 </span>
+                                                        </li>
+                                                        <li>
+                                                            2017
+                                                        </li>
+                                                        <li>
+                                                            <a href="action.html"><span>Action</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <p>Streamlab is a long established fact that a reader will be
+                                                        distracted by the readable content of a page when Streamlab at
+                                                        its layout. The point of using Lorem Streamlab is that it has a
+                                                        more-or-less normal distribution of Streamlab as opposed
+                                                        Streamlab.</p>
+                                                </div>
+                                                <div class="gen-movie-action">
+                                                    <div class="gen-btn-container button-1">
+                                                        <a href="single-movie.html" class="gen-button">
+                                                            <span class="text">Play Now</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="gen-btn-container button-2">
+                                                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                                                            class="gen-button popup-youtube popup-vimeo popup-gmaps gen-button-link">
+                                                            <i aria-hidden="true" class="ion ion-play"></i> <span
+                                                                class="text">Watch Trailer</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" style="background: url('assets/images/background/asset-24.jpg')">
+                                <div class="gen-movie-contain h-100">
+                                    <div class="container h-100">
+                                        <div class="row align-items-center h-100">
+                                            <div class="col-xl-6">
+                                                <div class="gen-tag-line"><span></span></div>
+                                                <div class="gen-movie-info">
+                                                    <h3>The Last Witness</h3>
+                                                </div>
+                                                <div class="gen-movie-meta-holder">
+                                                    <ul>
+                                                        <li class="gen-sen-rating">
+                                                            <span>
+                                                                GP </span>
+                                                        </li>
+                                                        <li>1hr 37 mins</li>
+                                                        <li> <img src="assets/images/asset-2.png" alt="streamlab-image">
+                                                            <span>
+                                                                0 </span>
+                                                        </li>
+                                                        <li>
+                                                            2018
+                                                        </li>
+                                                        <li>
+                                                            <a href="action.html"><span>Action</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <p>Streamlab is a long established fact that a reader will be
+                                                        distracted by the readable content of a page when Streamlab at
+                                                        its layout Streamlab.</p>
+                                                </div>
+                                                <div class="gen-movie-action">
+                                                    <div class="gen-btn-container button-1">
+                                                        <a href="single-movie.html" class="gen-button">
+                                                            <span class="text">Play Now</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="gen-btn-container button-2">
+                                                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                                                            class="gen-button popup-youtube popup-vimeo popup-gmaps gen-button-link">
+                                                            <i aria-hidden="true" class="ion ion-play"></i> <span
+                                                                class="text">Watch Trailer</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="gen-banner-movies">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide item" style="background: url('assets/images/background/asset-9.jpg')">
+                            <div class="gen-movie-contain h-100">
+                                <div class="container h-100">
+                                    <div class="row align-items-center h-100">
+                                        <div class="col-xl-6">
+                                            <div class="gen-tag-line"><span></span></div>
+                                            <div class="gen-movie-info">
+                                                <h3>Rebuneka the doll</h3>
+                                            </div>
+                                            <div class="gen-movie-meta-holder">
+                                                <ul>
+                                                    <li class="gen-sen-rating">
+                                                        <span>
+                                                            R </span>
+                                                    </li>
+                                                    <li>1hr 44 mins</li>
+                                                    <li> <img src="assets/images/asset-2.png" alt="streamlab-image">
+                                                        <span>
+                                                            0 </span>
+                                                    </li>
+                                                    <li>
+                                                        2018
+                                                    </li>
+                                                    <li>
+                                                        <a href="action.html"><span>Action</span></a>
+                                                    </li>
+                                                </ul>
+                                                <p>Streamlab is a long established fact that a reader will be
+                                                    distracted by the readable content of a page when Streamlab at
+                                                    its layout. The point of using Lorem Streamlab is that it has a
+                                                    more-or-less normal distribution of Streamlab as opposed
+                                                    Streamlab.</p>
+                                            </div>
+                                            <div class="gen-movie-action">
+                                                <div class="gen-btn-container button-1">
+                                                    <a href="single-movie.html" class="gen-button">
+                                                        <span class="text">Play Now</span>
+                                                    </a>
+                                                </div>
+                                                <div class="gen-btn-container button-2">
+                                                    <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                                                        class="gen-button popup-youtube popup-vimeo popup-gmaps gen-button-link">
+                                                        <i aria-hidden="true" class="ion ion-play"></i> <span
+                                                            class="text">Watch Trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide item" style="background: url('assets/images/background/asset-52.jpg')">
+                            <div class="gen-movie-contain h-100">
+                                <div class="container h-100">
+                                    <div class="row align-items-center h-100">
+                                        <div class="col-xl-6">
+                                            <div class="gen-tag-line"><span></span></div>
+                                            <div class="gen-movie-info">
+                                                <h3>the darkest nightplace</h3>
+                                            </div>
+                                            <div class="gen-movie-meta-holder">
+                                                <ul>
+                                                    <li class="gen-sen-rating">
+                                                        <span>
+                                                            R</span>
+                                                    </li>
+                                                    <li>1hr 46mins</li>
+                                                    <li> <img src="assets/images/asset-2.png" alt="streamlab-image">
+                                                        <span>
+                                                            0 </span>
+                                                    </li>
+                                                    <li>
+                                                        2017
+                                                    </li>
+                                                    <li>
+                                                        <a href="action.html"><span>Action</span></a>
+                                                    </li>
+                                                </ul>
+                                                <p>Streamlab is a long established fact that a reader will be
+                                                    distracted by the readable content of a page when Streamlab at
+                                                    its layout. The point of using Lorem Streamlab is that it has a
+                                                    more-or-less normal distribution of Streamlab as opposed
+                                                    Streamlab.</p>
+                                            </div>
+                                            <div class="gen-movie-action">
+                                                <div class="gen-btn-container button-1">
+                                                    <a href="single-movie.html" class="gen-button">
+                                                        <span class="text">Play Now</span>
+                                                    </a>
+                                                </div>
+                                                <div class="gen-btn-container button-2">
+                                                    <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                                                        class="gen-button popup-youtube popup-vimeo popup-gmaps gen-button-link">
+                                                        <i aria-hidden="true" class="ion ion-play"></i> <span
+                                                            class="text">Watch Trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide item" style="background: url('assets/images/background/asset-24.jpg')">
+                            <div class="gen-movie-contain h-100">
+                                <div class="container h-100">
+                                    <div class="row align-items-center h-100">
+                                        <div class="col-xl-6">
+                                            <div class="gen-tag-line"><span></span></div>
+                                            <div class="gen-movie-info">
+                                                <h3>The Last Witness</h3>
+                                            </div>
+                                            <div class="gen-movie-meta-holder">
+                                                <ul>
+                                                    <li class="gen-sen-rating">
+                                                        <span>
+                                                            GP </span>
+                                                    </li>
+                                                    <li>1hr 37 mins</li>
+                                                    <li> <img src="assets/images/asset-2.png" alt="streamlab-image">
+                                                        <span>
+                                                            0 </span>
+                                                    </li>
+                                                    <li>
+                                                        2018
+                                                    </li>
+                                                    <li>
+                                                        <a href="action.html"><span>Action</span></a>
+                                                    </li>
+                                                </ul>
+                                                <p>Streamlab is a long established fact that a reader will be
+                                                    distracted by the readable content of a page when Streamlab at
+                                                    its layout Streamlab.</p>
+                                            </div>
+                                            <div class="gen-movie-action">
+                                                <div class="gen-btn-container button-1">
+                                                    <a href="single-movie.html" class="gen-button">
+                                                        <span class="text">Play Now</span>
+                                                    </a>
+                                                </div>
+                                                <div class="gen-btn-container button-2">
+                                                    <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                                                        class="gen-button popup-youtube popup-vimeo popup-gmaps gen-button-link">
+                                                        <i aria-hidden="true" class="ion ion-play"></i> <span
+                                                            class="text">Watch Trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/asyncloader.min.js"></script>
+    <!-- JS bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- owl-carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- counter-js -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- popper-js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Iscotop -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="assets/js/slick.min.js"></script>
+
+    <script src="assets/js/streamlab-core.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+  
+</html>

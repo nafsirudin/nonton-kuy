@@ -1,0 +1,71 @@
+.swiper-button-prev, .swiper-button-next {
+    color: white;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+}
+.slide-arrow {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    top: 50%;
+    line-height: 1;
+    margin-top: -2em;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .slide-arrow:hover {
+    opacity: 0.6;
+  }
+  .slide-arrow.swiper-button-disabled {
+    display: none;
+  }
+  .slide-arrow__prev {
+    left: 0;
+  }
+  .slide-arrow__next {
+    right: 0;
+  }
+  .slide-arrow .fa-solid {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 5px #333;
+    line-height: 1;
+  }
+
+  .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-movie-info,
+  .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-movie-meta-holder,
+  .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-movie-action,
+  .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-tag-line,
+  .gen-banner-movies .swiper .swiper-slide .gen-movie-contain .gen-tag-img {
+      transition: transform .5s, opacity .3s, background .5s;
+      opacity: 0;
+      transform: translateX(300px);
+  }
+
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-info,
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-meta-holder,
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-action,
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-tag-line,
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-tag-img{
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-tag-line,
+  .gen-banner-movies .gen-movie-contain .gen-tag-img {
+      transition-delay: .3s;
+  }
+
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-info {
+      transition-delay: .5s;
+  }
+
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-meta-holder {
+      transition-delay: .7s;
+  }
+
+  .gen-banner-movies .swiper .swiper-slide-active .gen-movie-contain .gen-movie-action {
+      transition-delay: .9s;
+  }
